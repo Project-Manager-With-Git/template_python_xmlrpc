@@ -1,0 +1,19 @@
+from typing import Union
+
+Number = Union[int, float]
+
+
+class RPC:
+    """用于测试"""
+
+    def hello(self, name: str) -> str:
+        """测试类的方法hello"""
+        return "hello " + name
+
+    def bye(self, name: str) -> str:
+        """测试类的方法bye"""
+        return "bye " + name
+
+    def add(self, a: Number, b: Number) -> Number:
+        """测试加法"""
+        return a + b

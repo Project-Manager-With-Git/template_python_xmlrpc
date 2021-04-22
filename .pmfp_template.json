@@ -1,0 +1,24 @@
+{
+    "language": "py",
+    "mini_language_version": "3.6",
+    "author": "hsz",
+    "description": "python自带的xmlrpc的客户端和服务器模板",
+    "template_type": "c&s",
+    "requires": ["schema_entry>=0.1.5", "pyloggerhelper>=0.0.2"],
+    "components": {
+        "app": {
+            "description": "xmlrpc的服务应用,默认部署在`app`目录",
+            "default_path": "app"
+        },
+        "cli.py": {
+            "description": "xmlrpc的客户端,默认部署在`项目名称_cli.py`文件",
+            "default_path": "{{ project_name }}_cli.py"
+        }
+    },
+    "template_keys": {
+        "xmlrpc_app_name": {
+            "description": "服务应用名,默认为项目名称",
+            "default": "{{ project_name }}"
+        }
+    }
+}
