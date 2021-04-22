@@ -10,15 +10,19 @@
             "description": "xmlrpc的服务应用,默认部署在`app`目录",
             "default_path": "app"
         },
-        "cli.py": {
-            "description": "xmlrpc的客户端,默认部署在`项目名称_cli.py`文件",
-            "default_path": "{{ project_name }}_cli.py"
+        "cli.py.jinja": {
+            "description": "xmlrpc的客户端,默认部署在`项目名称的全小写_cli.py`文件",
+            "default_path": "{{ project_name | lower }}_cli.py"
         }
     },
     "template_keys": {
         "xmlrpc_app_name": {
             "description": "服务应用名,默认为项目名称",
             "default": "{{ project_name }}"
+        },
+        "xmlrpc_app_name_title": {
+            "description": "服务应用名的大写形式,默认为项目名称",
+            "default": "{{ project_name | replace(\"_\", \" \") | replace(\"-\", \" \") | title | replace(\" \", \"\") }}"
         }
     }
 }

@@ -4,7 +4,7 @@ from pyproxypattern import Proxy
 MultiCall = xmlrpc.client.MultiCall
 
 
-class {{ xmlrpc_app_name_upper }}Client(Proxy):
+class {{ xmlrpc_app_name_title }}Client(Proxy):
     __slots__ = ('url', 'instance', '_callbacks', '_instance_check')
     url: Optional[str]
 
@@ -35,11 +35,11 @@ class {{ xmlrpc_app_name_upper }}Client(Proxy):
 
 if __name__ == "__main__":
     url = "http://localhost:5000"
-    cli = {{ xmlrpc_app_name_upper }}Client(url)
+    cli = {{ xmlrpc_app_name_title }}Client(url)
     print(cli.system.listMethods())
     print(cli.add(123, 1))
     print(cli.hello("hsz"))
-    with {{ xmlrpc_app_name_upper }}Client(url) as s:
+    with {{ xmlrpc_app_name_title }}Client(url) as s:
         multi = MultiCall(s)
         multi.add(1, 2)
         multi.hello("qwe")
