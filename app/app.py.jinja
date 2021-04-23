@@ -12,7 +12,7 @@ class ThreadXMLRPCServer(ThreadingMixIn, SimpleXMLRPCServer):
 
 
 class App(EntryPoint):
-    """faiss_index_loader grpc的服务端启动入口."""
+    """xml-rpc的服务端启动入口."""
     _name = "{{ xmlrpc_app_name }}"
     schema = {
         "$schema": "http://json-schema.org/draft-07/schema#",
