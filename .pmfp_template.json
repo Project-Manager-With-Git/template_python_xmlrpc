@@ -7,10 +7,12 @@
     "requires": ["schema_entry>=0.1.5", "pyloggerhelper>=0.0.2"],
     "components": {
         "app": {
+            "source": "app",
             "description": "xmlrpc的服务应用,默认部署在`app`目录",
             "default_path": "app"
         },
-        "cli.py.jinja": {
+        "cli": {
+            "source": "cli.py.jinja",
             "description": "xmlrpc的客户端,默认部署在`项目名称的全小写_cli.py`文件",
             "default_path": "{{ project_name | lower }}_cli.py"
         }
