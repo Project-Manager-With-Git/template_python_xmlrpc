@@ -84,7 +84,7 @@ class App(EntryPoint):
                 server.serve_forever()
             except KeyboardInterrupt:
                 log.info("xmlrpc stoped!", address=f"tcp://{host}:{port}")
-            except Exception:
+            except Exception as e:
                 log.error("xmlrpc servic get error!", address=f"tcp://{host}:{port}", err=type(e), err_msg=str(e), exc_info=True, stack_info=True)
                 sys.exit(1)
             finally:
