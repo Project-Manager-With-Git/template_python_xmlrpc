@@ -32,7 +32,7 @@
         },
         "dockerfile": {
             "source": "cp_dockerfiles//python_singal_dockerfile",
-            "description": "xmlrpc的客户端,默认部署在`项目名称的全小写_cli.py`文件",
+            "description": "jsonrpc打包为镜像的dockerfile",
             "default_path": "dockerfile"
         }
     },
