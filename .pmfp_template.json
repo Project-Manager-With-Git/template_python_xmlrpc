@@ -5,7 +5,7 @@
     "description": "python自带的xmlrpc的客户端和服务器模板",
     "template_type": "c&s",
     "requires": [
-        "schema_entry>=0.1.5", 
+        "schema_entry>=0.1.5",
         "pyloggerhelper>=0.0.2"
     ],
     "test_requires": [
@@ -15,7 +15,7 @@
         "pylint >= 2.8.0",
         "pydocstyle>=6.0.0"
     ],
-    "test":{
+    "test": {
         "source": "cp_python_test//simplerpc_tests",
         "default_path": "tests"
     },
@@ -29,6 +29,11 @@
             "source": "cli.py.jinja",
             "description": "xmlrpc的客户端,默认部署在`项目名称的全小写_cli.py`文件",
             "default_path": "{{ project_name | lower }}_cli.py"
+        },
+        "dockerfile": {
+            "source": "cp_dockerfiles//python_singal_dockerfile",
+            "description": "xmlrpc的客户端,默认部署在`项目名称的全小写_cli.py`文件",
+            "default_path": "dockerfile"
         }
     },
     "template_keys": {
