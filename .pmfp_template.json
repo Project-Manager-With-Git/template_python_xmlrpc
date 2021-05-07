@@ -3,7 +3,7 @@
     "mini_language_version": "3.6",
     "author": "hsz",
     "description": "python自带的xmlrpc的客户端和服务器模板",
-    "template_type": "c&s",
+    "template_type": "socket",
     "requires": [
         "schema_entry>=0.1.5",
         "pyloggerhelper>=0.0.2"
