@@ -31,7 +31,7 @@
             "default_path": "{{ project_name | lower }}_cli.py"
         },
         "dockerfile": {
-            "source": "cp_dockerfiles//python_singal_dockerfile",
+            "source": "cp_dockerfiles//python_pyz_allinone_dockerfile",
             "description": "jsonrpc打包为镜像的dockerfile",
             "default_path": "dockerfile"
         }
