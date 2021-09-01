@@ -16,7 +16,7 @@
         "pydocstyle>=6.0.0"
     ],
     "test": {
-        "source": "cp_python_test//simplerpc_tests",
+        "source": "cp_python_test@v0.0.1//simplerpc_tests",
         "default_path": "tests"
     },
     "components": {
@@ -29,11 +29,6 @@
             "source": "cli.py.jinja",
             "description": "xmlrpc的客户端,默认部署在`项目名称的全小写_cli.py`文件",
             "default_path": "{{ project_name | lower }}_cli.py"
-        },
-        "dockerfile": {
-            "source": "cp_dockerfiles//python_pyz_allinone_dockerfile",
-            "description": "jsonrpc打包为镜像的dockerfile",
-            "default_path": "dockerfile"
         }
     },
     "template_keys": {
@@ -44,6 +39,16 @@
         "app_name_camelcase": {
             "description": "服务应用名的驼峰形式,默认为项目名称",
             "default": "{{ project_name | replace(\"_\", \" \") | replace(\"-\", \" \") | title | replace(\" \", \"\") }}"
+        },
+        "dockerfile": {
+            "source": "cp_dockerfiles@v0.0.1//python_pyz_allinone_dockerfile",
+            "description": "xmlrpc打包为镜像的dockerfile",
+            "default_path": "dockerfile"
+        },
+        "docker-compose": {
+            "source": "cp_dockercompose@v0.0.1//server_standalone",
+            "description": "通用的服务使用的dockercompose,适用于调试",
+            "default_path": "docker-compose.yml"
         }
     }
 }
